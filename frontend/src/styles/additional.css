@@ -1,0 +1,54 @@
+/* Doctor Details, Booking, Dashboard, Auth, About, Contact, Emergency Pages */
+
+/* ===== Doctor Details Page ===== */
+.doctor-details-page {
+  background: #f8f9fb;
+  min-height: calc(100vh - 60px);
+}
+
+.doctor-header {
+  background: linear-gradient(135deg, #0b6bff 0%, #0052cc 100%);
+  color: white;
+  padding: 40px 20px;
+}
+
+.doctor-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.doctor-photo {
+  flex-shrink: 0;
+}
+
+.doctor-avatar-xl {
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.doctor-header-info h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.specialty-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ... rest of original additional.css content is copied here ... */
