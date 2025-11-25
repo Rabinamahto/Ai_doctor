@@ -64,15 +64,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="social-links">
-            <h4>Follow Us</h4>
-            <div className="social-icons">
-              <a href="#" className="social-icon">📘 Facebook</a>
-              <a href="#" className="social-icon">🐦 Twitter</a>
-              <a href="#" className="social-icon">📷 Instagram</a>
-              <a href="#" className="social-icon">💼 LinkedIn</a>
-            </div>
-          </div>
+          {/* Follow-us removed per request */}
         </aside>
 
         <section className="contact-form-card">
