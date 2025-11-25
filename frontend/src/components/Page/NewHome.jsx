@@ -77,34 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Platform */}
-      <section className="about-section">
-        <div className="about-content">
-          <h2 className="section-title">Why Choose Hello Doctor?</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🤖</div>
-              <h3>AI-Powered Health Assistant</h3>
-              <p>Get instant health guidance and doctor recommendations based on your symptoms</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Instant Booking</h3>
-              <p>Book appointments with top doctors in just a few clicks, anytime</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🏥</div>
-              <h3>Verified Doctors</h3>
-              <p>All doctors are verified professionals with years of experience</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">💻</div>
-              <h3>Online & Offline</h3>
-              <p>Choose between online consultations or in-person visits</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* About Platform: removed per request */}
 
       {/* CTA Section */}
       <section className="cta-section">
