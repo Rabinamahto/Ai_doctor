@@ -80,7 +80,7 @@ export default function Home() {
       {/* About Platform */}
       <section className="about-section">
         <div className="about-content">
-          <h2 className="section-title">Why Choose Doctor AI?</h2>
+          <h2 className="section-title">Why Choose Hello Doctor?</h2>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">🤖</div>

@@ -1,6 +1,6 @@
 {
-  "short_name": "DoctorAI",
-  "name": "Doctor AI - Frontend",
+  "short_name": "HelloDoctor",
+  "name": "Hello Doctor - Frontend",
   "icons": [
     {
       "src": "favicon.ico",

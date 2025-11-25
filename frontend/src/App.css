@@ -77,13 +77,14 @@
 .ai-notes { margin-top:8px; color:#666; }
 
 .doctors-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:12px; margin-top:12px; }
-.doctor-card { display:flex; gap:12px; align-items:center; padding:12px; border-radius:10px; background:#fff; border:1px solid #f0f4ff; }
+.doctor-card { display:flex; gap:12px; align-items:center; padding:16px; border-radius:14px; background:var(--card-bg, #fff); border:1px solid rgba(11,107,255,0.06); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.doctor-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08); }
 .doc-name { font-weight:700; }
 .doc-specialty { color:#666; font-size:13px; }
 .doc-meta { color:#333; margin-top:6px; }
 .doc-actions { margin-left:auto; }
 
-.card { background:#fff; padding:12px; border-radius:8px; border:1px solid #eef3ff; }
+.card { background:var(--card-bg, #fff); padding:14px; border-radius:12px; border:1px solid rgba(11,107,255,0.04); box-shadow: 0 8px 24px rgba(2,6,23,0.04); }
 .form-card { max-width:640px; display:flex; flex-direction:column; gap:8px; background:#fff; padding:12px; border-radius:8px; border:1px solid #eef3ff; }
 
 .App-link {

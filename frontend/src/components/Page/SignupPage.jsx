@@ -63,8 +63,10 @@ export default function SignupPage() {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-card">
-          <h1>Create Account</h1>
-          <p className="auth-subtitle">Sign up to get started</p>
+          <div className="auth-illustration">Join<br/>DoctorAI</div>
+          <div>
+            <h1>Create Account</h1>
+            <p className="auth-subtitle">Sign up to get started</p>
 
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
@@ -121,18 +123,19 @@ export default function SignupPage() {
             </button>
           </form>
 
-          <div className="divider">
-            <span>OR</span>
+            <div className="divider">
+              <span>OR</span>
+            </div>
+
+            <button onClick={handleGoogleSignup} className="btn-google">
+              <span className="google-icon">🔍</span>
+              Sign up with Google
+            </button>
+
+            <p className="auth-link">
+              Already have an account? <Link to="/login">Login</Link>
+            </p>
           </div>
-
-          <button onClick={handleGoogleSignup} className="btn-google">
-            <span className="google-icon">🔍</span>
-            Sign up with Google
-          </button>
-
-          <p className="auth-link">
-            Already have an account? <Link to="/login">Login</Link>
-          </p>
         </div>
       </div>
     </div>

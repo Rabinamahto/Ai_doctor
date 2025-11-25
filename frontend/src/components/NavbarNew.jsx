@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="nav-container">
         <Link to="/" className="nav-brand">
           <span className="brand-icon">🏥</span>
-          <span className="brand-name">Doctor AI</span>
+          <span className="brand-name">Hello Doctor</span>
         </Link>
 
         <button

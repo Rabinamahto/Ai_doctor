@@ -40,8 +40,10 @@ export default function LoginPage() {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-card">
-          <h1>Welcome Back</h1>
-          <p className="auth-subtitle">Login to your account</p>
+          <div className="auth-illustration">Doctor<br/>AI</div>
+          <div>
+            <h1>Welcome Back</h1>
+            <p className="auth-subtitle">Login to your account</p>
 
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
@@ -73,18 +75,19 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="divider">
-            <span>OR</span>
+            <div className="divider">
+              <span>OR</span>
+            </div>
+
+            <button onClick={handleGoogleLogin} className="btn-google">
+              <span className="google-icon">🔍</span>
+              Continue with Google
+            </button>
+
+            <p className="auth-link">
+              Don't have an account? <Link to="/signup">Sign up</Link>
+            </p>
           </div>
-
-          <button onClick={handleGoogleLogin} className="btn-google">
-            <span className="google-icon">🔍</span>
-            Continue with Google
-          </button>
-
-          <p className="auth-link">
-            Don't have an account? <Link to="/signup">Sign up</Link>
-          </p>
         </div>
       </div>
     </div>
