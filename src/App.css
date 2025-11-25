@@ -1,10 +1,18 @@
+/* Import all CSS styles */
+@import './styles/pages.css';
+@import './styles/doctors.css';
+@import './styles/additional.css';
+
+/* Base App Styles */
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-main {
+  flex: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,15 +22,69 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(90deg, #0f172a, #0b3a57);
+  color: #fff;
+  padding: 16px 24px;
 }
+
+.App-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App-title {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+}
+
+.App-nav .nav-link {
+  color: rgba(255,255,255,0.9);
+  margin-left: 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.App-main {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 16px 80px;
+}
+
+/* common */
+.page-wrap { padding: 8px 0; }
+.muted { color: #666; }
+
+.home-form { display: flex; flex-direction: column; gap: 8px; max-width: 720px; }
+.home-input { padding: 12px 10px; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; }
+.home-actions { display:flex; gap:8px; }
+
+.btn-primary { background:#0b6bff; color:#fff; padding:10px 14px; border-radius:8px; border:none; cursor:pointer; }
+.btn-ghost { background:transparent; color:#0b6bff; padding:10px 14px; border-radius:8px; border:1px solid #e6f0ff; cursor:pointer; }
+.btn-link { background:transparent; color:#0b6bff; border:none; cursor:pointer; text-decoration:underline; padding:6px 8px; }
+.btn-sm { background:#0b6bff; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; }
+
+.ai-card { display:flex; gap:12px; align-items:center; background:#fff; border:1px solid #eef3ff; padding:12px; border-radius:10px; box-shadow:0 4px 12px rgba(11,107,255,0.06); max-width:640px; }
+.avatar, .doc-avatar { width:56px; height:56px; border-radius:10px; background:linear-gradient(135deg,#0b6bff,#5ec6ff); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
+.ai-card-body { flex:1; }
+.ai-row { display:flex; justify-content:space-between; align-items:center; }
+.ai-title { font-weight:700; }
+.ai-confidence { color:#0b6bff; font-weight:700; }
+.ai-specialty { color:#333; margin-top:6px; }
+.ai-notes { margin-top:8px; color:#666; }
+
+.doctors-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:12px; margin-top:12px; }
+.doctor-card { display:flex; gap:12px; align-items:center; padding:12px; border-radius:10px; background:#fff; border:1px solid #f0f4ff; }
+.doc-name { font-weight:700; }
+.doc-specialty { color:#666; font-size:13px; }
+.doc-meta { color:#333; margin-top:6px; }
+.doc-actions { margin-left:auto; }
+
+.card { background:#fff; padding:12px; border-radius:8px; border:1px solid #eef3ff; }
+.form-card { max-width:640px; display:flex; flex-direction:column; gap:8px; background:#fff; padding:12px; border-radius:8px; border:1px solid #eef3ff; }
 
 .App-link {
   color: #61dafb;
