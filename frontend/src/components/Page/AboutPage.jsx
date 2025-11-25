@@ -3,16 +3,16 @@ import React from 'react';
 export default function AboutPage() {
   return (
     <div className="about-page">
-      <div className="about-hero">
-        <h1>About Doctor AI</h1>
+        <div className="about-hero">
+        <h1>About Hello Doctor</h1>
         <p className="hero-subtitle">Making Healthcare Accessible with AI</p>
       </div>
 
       <div className="about-content">
         <section className="about-section">
           <h2>Who We Are</h2>
-          <p>
-            Doctor AI is a revolutionary healthcare platform that combines artificial intelligence
+            <p>
+            Hello Doctor is a revolutionary healthcare platform that combines artificial intelligence
             with traditional medical expertise to provide accessible, affordable, and instant
             healthcare solutions to everyone.
           </p>
