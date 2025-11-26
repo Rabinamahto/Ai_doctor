@@ -89,8 +89,8 @@ export default function EmergencyPage() {
           <h3>Non-Emergency Medical Help</h3>
           <p>For non-life-threatening issues, consult with our doctors:</p>
           <div className="non-emergency-actions">
-            <button onClick={() => navigate('/ai-assistant')} className="btn-ai-help">
-              🤖 AI Health Assistant
+            <button onClick={() => navigate('/doctors')} className="btn-ai-help">
+              👨‍⚕️ Find a Doctor
             </button>
             <button onClick={() => navigate('/doctors')} className="btn-book-doctor">
               👨‍⚕️ Book a Doctor

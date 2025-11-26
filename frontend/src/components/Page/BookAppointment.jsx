@@ -96,10 +96,13 @@ export default function BookAppointment() {
         <h1>Book Your Appointment</h1>
         {doctor && (
           <div className="selected-doctor-info">
-            <div className="doctor-avatar-md">{doctor.name.charAt(3)}</div>
-            <div>
+            <div className="doctor-avatar-md">
+              <img src={doctor.photo || require('../../utils/avatar').default(doctor.name, 72)} alt={doctor.name} />
+            </div>
+            <div className="doctor-meta">
               <h3>{doctor.name}</h3>
-              <p>{doctor.specialty}</p>
+              <p className="muted">{doctor.specialty} • {doctor.experience} yrs</p>
+              <p className="muted small">{doctor.clinicAddress}</p>
             </div>
           </div>
         )}
@@ -237,13 +240,13 @@ export default function BookAppointment() {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="btn-submit">
+            <button type="submit" className="btn-cta primary">
               ✓ Confirm Appointment
             </button>
             <button
               type="button"
               onClick={() => navigate(-1)}
-              className="btn-cancel"
+              className="btn-cta secondary"
             >
               Cancel
             </button>

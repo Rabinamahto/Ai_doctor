@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/doctors" onClick={() => setMenuOpen(false)}>Doctors</Link>
-          <Link to="/ai-assistant" onClick={() => setMenuOpen(false)}>AI Assistant</Link>
+          {/* AI Assistant link removed */}
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           

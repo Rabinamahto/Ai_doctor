@@ -23,7 +23,7 @@ export default function Home() {
             <span className="gradient-text">Anytime, Anywhere</span>
           </h1>
           <p className="hero-subtitle">
-            Get instant access to top doctors, AI health assistance, and seamless appointment booking
+            Get instant access to top doctors and seamless appointment booking
           </p>
           
           {/* Search Bar */}
@@ -46,10 +46,7 @@ export default function Home() {
               <span className="icon">📅</span>
               <span className="label">Book Appointment</span>
             </button>
-            <button onClick={() => navigate('/ai-assistant')} className="quick-link-card secondary">
-              <span className="icon">🤖</span>
-              <span className="label">AI Health Assistant</span>
-            </button>
+            {/* AI assistant quick link removed */}
             <button onClick={() => navigate('/emergency')} className="quick-link-card danger">
               <span className="icon">🚨</span>
               <span className="label">Emergency Help</span>
@@ -83,13 +80,13 @@ export default function Home() {
       <section className="cta-section">
         <div className="cta-content">
           <h2 className="cta-title">Ready to Get Started?</h2>
-          <p className="cta-subtitle">Book your consultation now or chat with our AI assistant</p>
+          <p className="cta-subtitle">Book your consultation now or get quick health tips</p>
           <div className="cta-buttons">
             <button onClick={() => navigate('/doctors')} className="btn-cta primary">
               📅 Book Now
             </button>
-            <button onClick={() => navigate('/ai-assistant')} className="btn-cta secondary">
-              🤖 Ask AI
+            <button onClick={() => navigate('/doctors')} className="btn-cta secondary">
+              � Find a Doctor
             </button>
           </div>
         </div>

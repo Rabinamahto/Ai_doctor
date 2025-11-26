@@ -1,6 +1,6 @@
-# Doctor AI Backend
+# Backend (Doctor App)
 
-Small Express backend that proxies requests to the Gemini API. Copy `.env.example` to `.env` and set `GEMINI_API_KEY` and optionally `GEMINI_ENDPOINT`.
+Small Express backend that serves doctor and appointment data used by the frontend. The AI assistant / Gemini proxy has been removed from this project. If you want to re-enable AI features, restore the `/routes/geminiRoute.js` and `utils/aiHelper.js` and set the proper environment variables.
 
 Run:
 
@@ -10,4 +10,4 @@ npm install
 npm run dev
 ```
 
-The server exposes POST /api/gemini { prompt } which forwards to configured Gemini endpoint.
+Available endpoints include `/api/doctors` and `/api/appointments` (see `routes/`).

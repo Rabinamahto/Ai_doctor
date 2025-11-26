@@ -7,7 +7,6 @@ import Navbar from './components/NavbarNew';
 
 // Pages
 import NewHome from './components/Page/NewHome';
-import AIAssistant from './components/Page/AIAssistant';
 import DoctorsList from './components/Page/DoctorsList';
 import DoctorDetails from './components/Page/DoctorDetails';
 import BookAppointment from './components/Page/BookAppointment';
@@ -26,7 +25,7 @@ function App() {
         <main className="App-main">
           <Routes>
             <Route path="/" element={<NewHome />} />
-            <Route path="/ai-assistant" element={<AIAssistant />} />
+            {/* AI Assistant removed */}
             <Route path="/doctors" element={<DoctorsList />} />
             <Route path="/doctor/:id" element={<DoctorDetails />} />
             <Route path="/appointment" element={<BookAppointment />} />
