@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { doctors } from '../../data/doctorsData';
+import generateAvatar from '../../utils/avatar';
 
 export default function DoctorDetails() {
   const { id } = useParams();
@@ -36,23 +37,27 @@ export default function DoctorDetails() {
   return (
     <div className="doctor-details-page">
       {/* Doctor Header */}
-      <div className="doctor-header">
+      <div className="doctor-header hero">
         <div className="doctor-header-content">
           <div className="doctor-photo">
-            <div className="doctor-avatar-xl">{doctor.name.charAt(3)}</div>
+            <div className="doctor-avatar-xl">
+              <img src={doctor.photo || generateAvatar(doctor.name, 120)} alt={doctor.name} />
+            </div>
           </div>
           <div className="doctor-header-info">
-            <h1>{doctor.name}</h1>
-            <p className="specialty-badge">{doctor.specialty}</p>
-            <p className="qualifications">{doctor.qualifications}</p>
-            <div className="rating-section">
-              <span className="rating">⭐ {doctor.rating}</span>
-              <span className="reviews-count">({doctor.reviews} reviews)</span>
+            <h1 className="doctor-name">{doctor.name}</h1>
+            <div className="meta-row">
+              <span className="specialty-badge">{doctor.specialty}</span>
+              <span className="muted small">{doctor.qualifications}</span>
             </div>
-            <div className="quick-info">
-              <span>💼 {doctor.experience} years experience</span>
+            <div className="rating-section">
+              <div className="stars">{'★'.repeat(Math.round(doctor.rating))}</div>
+              <div className="rating-small muted">{doctor.rating} • {doctor.reviews} reviews</div>
+            </div>
+            <div className="quick-info muted">
+              <span>💼 {doctor.experience} yrs</span>
               <span>📍 {doctor.location}</span>
-              <span>💰 ₹{doctor.fees} consultation</span>
+              <span>💰 ₹{doctor.fees}</span>
             </div>
           </div>
         </div>
@@ -96,8 +101,11 @@ export default function DoctorDetails() {
         {/* Right Column - Booking */}
         <aside className="booking-sidebar">
           <div className="booking-card">
-            <h3>Book Appointment</h3>
-            
+            <div className="booking-card-head">
+              <h3>Book Appointment</h3>
+              <div className="fees">₹{doctor.fees}</div>
+            </div>
+
             <div className="booking-field">
               <label>Available Days</label>
               <div className="days-chips">
@@ -132,18 +140,18 @@ export default function DoctorDetails() {
               </div>
             </div>
 
-            <div className="booking-field">
-              <label>Consultation Fee</label>
-              <p className="fees-display">₹{doctor.fees}</p>
+            <div className="booking-actions">
+              <button
+                onClick={handleBookNow}
+                className="btn-cta primary full-width"
+                disabled={!selectedDate || !selectedTime}
+              >
+                📅 Book Now
+              </button>
+              <button onClick={() => navigate('/doctors')} className="btn-cta secondary full-width">
+                ← Back to Doctors
+              </button>
             </div>
-
-            <button
-              onClick={handleBookNow}
-              className="btn-book-now"
-              disabled={!selectedDate || !selectedTime}
-            >
-              📅 Book Now
-            </button>
           </div>
         </aside>
       </div>

@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import doctorRoutes from "./routes/doctorRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
-import geminiRoute from "./routes/geminiRoute.js";
 
 dotenv.config();
 connectDB();
@@ -14,7 +13,6 @@ app.use(express.json());
 // Routes
 app.use("/api/doctors", doctorRoutes);
 app.use("/api/appointments", appointmentRoutes);
-app.use("/api/gemini", geminiRoute);
 
 app.get("/", (req, res) => {
   res.send("Backend API running");
